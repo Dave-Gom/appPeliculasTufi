@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <View style={{flex: 1, paddingLeft: 20}}>
+      <View style={{flex: 1}}>
         <FlatList
           data={customHome}
           renderItem={({item}) => (

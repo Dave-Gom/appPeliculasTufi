@@ -31,7 +31,8 @@ export const CustomHeaderFuncion = ({
     headerTitleStyle: [
       headerTitleStyles,
       {
-        fontFamily: 'PlusJakartaSans-Regular',
+        fontFamily: 'PlusJakartaSans-ExtraBold',
+        fontWeight: '800',
       },
     ],
     headerShadowVisible: false,

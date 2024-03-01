@@ -7,12 +7,14 @@
 
 import React from 'react';
 import Background from './components/background/Background';
-import {AppConfig} from './config/appConfig';
+import AppRoutes from './routes/AppRouter';
 
 function App(): React.JSX.Element {
-  console.log(AppConfig);
-
-  return <Background />;
+  return (
+    <Background>
+      <AppRoutes />
+    </Background>
+  );
 }
 
 export default App;

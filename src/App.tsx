@@ -6,9 +6,10 @@
  */
 
 import React from 'react';
+import Background from './components/background/Background';
 
 function App(): React.JSX.Element {
-  return <></>;
+  return <Background></Background>;
 }
 
 export default App;

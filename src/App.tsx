@@ -5,6 +5,7 @@
  * @format
  */
 
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import Background from './components/background/Background';
 import AppRoutes from './routes/AppRouter';
@@ -12,7 +13,9 @@ import AppRoutes from './routes/AppRouter';
 function App(): React.JSX.Element {
   return (
     <Background>
-      <AppRoutes />
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
     </Background>
   );
 }

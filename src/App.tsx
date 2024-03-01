@@ -7,9 +7,12 @@
 
 import React from 'react';
 import Background from './components/background/Background';
+import {AppConfig} from './config/appConfig';
 
 function App(): React.JSX.Element {
-  return <Background></Background>;
+  console.log(AppConfig);
+
+  return <Background />;
 }
 
 export default App;

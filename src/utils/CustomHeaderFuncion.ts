@@ -1,4 +1,5 @@
 import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
+import {StyleProp, TextStyle} from 'react-native';
 
 interface headerProps {
   title: string;
@@ -6,6 +7,11 @@ interface headerProps {
   headerColor?: string;
   tintColor?: string;
   alloBack?: boolean;
+  headerTitleStyles?: StyleProp<
+    Pick<TextStyle, 'fontFamily' | 'fontSize' | 'fontWeight'> & {
+      color?: string | undefined;
+    }
+  >;
 }
 
 export const CustomHeaderFuncion = ({
@@ -13,6 +19,7 @@ export const CustomHeaderFuncion = ({
   headerColor,
   tintColor,
   alloBack = true,
+  headerTitleStyles,
 }: headerProps) => {
   const headerOptions: NativeStackNavigationOptions = {
     title: title,
@@ -21,7 +28,12 @@ export const CustomHeaderFuncion = ({
     },
     headerBackTitleVisible: false,
     headerTintColor: tintColor ? tintColor : '#29166F',
-    headerTitleStyle: {fontFamily: 'PlusJakartaSans-Regular'},
+    headerTitleStyle: [
+      headerTitleStyles,
+      {
+        fontFamily: 'PlusJakartaSans-Regular',
+      },
+    ],
     headerShadowVisible: false,
     headerBackButtonMenuEnabled: alloBack,
   };

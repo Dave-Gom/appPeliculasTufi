@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
+import LottieViewer from '../components/Loaders/LottieViewer';
 import MoviesList from '../components/moviesList/MoviesList';
 import {CategoriesEnum} from '../models/enums/categoriesEnum';
 import {Movie} from '../models/interfaces/movie';
@@ -36,12 +37,24 @@ const MovieWidget = ({
   const loadData = async () => {
     setLoading(true);
     let pelis = await loadFunction();
-    console.log(JSON.stringify(pelis));
+    console.log(JSON.stringify(pelis, undefined, 2));
 
     setdata(pelis);
     setLoading(false);
     refreshControl(false);
   };
+
+  if (loading) {
+    return (
+      <LottieViewer
+        imagen={require('../../assets/lotties/Loader.json')}
+        backgroundColor={'transparent'}
+        imgWidth={150}
+        imgHeight={150}
+        allowLoop={true}
+      />
+    );
+  }
 
   return <MoviesList title={type} data={data} />;
 };

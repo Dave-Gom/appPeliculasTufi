@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import {loadNowPlaying} from '../implementations/TheMovieDBImpl';
+import {loadNowPlaying, loadPopular} from '../implementations/TheMovieDBImpl';
 import {CategoriesEnum} from '../models/enums/categoriesEnum';
 import MovieWidget from './MovieWidget';
 
@@ -19,8 +19,6 @@ export const WidgetComponent = ({
   type,
   params: {refreshing, setRefreshing},
 }: WidgetComponentProps) => {
-  console.log(type);
-
   switch (type) {
     case CategoriesEnum.NOWPLAYING:
       return (
@@ -33,7 +31,17 @@ export const WidgetComponent = ({
           />
         </View>
       );
-
+    case CategoriesEnum.POPULAR:
+      return (
+        <View style={{paddingBottom: 15}}>
+          <MovieWidget
+            type={CategoriesEnum.POPULAR}
+            loadFunction={loadPopular}
+            refreshControl={setRefreshing}
+            refreshing={refreshing}
+          />
+        </View>
+      );
     default:
       return <View />;
   }

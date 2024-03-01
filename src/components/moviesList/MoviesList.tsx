@@ -28,6 +28,7 @@ const MoviesList = ({title, data}: TitlesWidgetProps) => {
           );
         }}
         horizontal
+        showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{marginTop: 20, marginBottom: 20}}
       />

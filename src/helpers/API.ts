@@ -28,6 +28,7 @@ export const API = async (contentType?: string) => {
       headers: {
         Accept: 'application/x-www-form-urlencoded',
         'Content-Type': contentType ?? 'application/json',
+        Authorization: `Bearer ${AppConfig.token}`,
       },
     });
     axiosOBj.defaults.withCredentials = true;
@@ -40,14 +41,7 @@ export const API = async (contentType?: string) => {
 
   const AXIOS = await createAxiosObject();
 
-  const get: getType = (
-    url: string,
-    config = {
-      headers: {
-        Authorization: `Bearer + ${AppConfig.token}`,
-      },
-    },
-  ) => {
+  const get: getType = (url: string, config = {}) => {
     return AXIOS.get(url, config);
   };
 
@@ -55,9 +49,6 @@ export const API = async (contentType?: string) => {
     url: string,
     body: any,
     config = {
-      headers: {
-        Authorization: `Bearer + ${AppConfig.token}`,
-      },
       withCredentials: true,
     },
   ) => {
@@ -68,9 +59,6 @@ export const API = async (contentType?: string) => {
     url: string,
     body: any,
     config = {
-      headers: {
-        Authorization: `Bearer + ${AppConfig.token}`,
-      },
       withCredentials: true,
     },
   ) => {
@@ -81,9 +69,6 @@ export const API = async (contentType?: string) => {
     url: string,
     body: any,
     config = {
-      headers: {
-        Authorization: `Bearer + ${AppConfig.token}`,
-      },
       withCredentials: true,
     },
   ) => {

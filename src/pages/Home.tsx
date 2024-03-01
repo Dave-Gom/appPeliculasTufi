@@ -1,15 +1,20 @@
 import React, {useState} from 'react';
-import {FlatList, RefreshControl, SafeAreaView, View} from 'react-native';
+import {FlatList, RefreshControl, View} from 'react-native';
 import {CategoriesEnum} from '../models/enums/categoriesEnum';
 import {WidgetComponent} from '../widgets/WidgetComponent';
 
-const customHome = [CategoriesEnum.NOWPLAYING, CategoriesEnum.POPULAR];
+const customHome = [
+  CategoriesEnum.NOWPLAYING,
+  CategoriesEnum.POPULAR,
+  CategoriesEnum.TOPRATED,
+  CategoriesEnum.UPCOMING,
+];
 
 const Home = () => {
   const [refreshing, setRefreshing] = useState(false);
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <View style={{flex: 1}}>
       <View style={{flex: 1}}>
         <FlatList
           data={customHome}
@@ -26,9 +31,12 @@ const Home = () => {
               onRefresh={() => setRefreshing(true)}
             />
           }
+          style={{flex: 1}}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 

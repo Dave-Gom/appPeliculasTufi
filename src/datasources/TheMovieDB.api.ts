@@ -1,4 +1,3 @@
-import {AppConfig} from '../config/appConfig';
 import {API} from '../helpers/API';
 import {NowPlayingResponse} from '../models/responses/NowPlaying.response';
 import {PopularMoviesResponse} from '../models/responses/PopularMovies.response';
@@ -6,7 +5,7 @@ import {TopRatedResponse} from '../models/responses/TopRated.response';
 import {UpcomingMoviesResponse} from '../models/responses/Upcoming.response';
 
 export enum sourcesEnum {
-  NOWPLAYING = '/movie/upcoming',
+  NOWPLAYING = '/movie/now_playing',
   POPULAR = '/movie/popular',
   TOPRATED = '/movie/top_rated',
   UPCOMING = '/movie/upcoming',
@@ -17,7 +16,7 @@ export const getNowPlaying = async (language = 'en') => {
     const api = await API();
 
     const nowPlaying = await api.get<NowPlayingResponse>(
-      `${sourcesEnum.NOWPLAYING}?api_key=${AppConfig.token}&language=${language}`,
+      `${sourcesEnum.NOWPLAYING}?language=${language}`,
     );
 
     if (nowPlaying.status === 200) {
@@ -35,7 +34,7 @@ export const getPopular = async (language = 'en') => {
     const api = await API();
 
     const nowPlaying = await api.get<PopularMoviesResponse>(
-      `${sourcesEnum.POPULAR}?api_key=${AppConfig.token}&language=${language}`,
+      `${sourcesEnum.POPULAR}?language=${language}`,
     );
 
     if (nowPlaying.status === 200) {
@@ -52,7 +51,7 @@ export const getTopRated = async (language = 'en') => {
     const api = await API();
 
     const nowPlaying = await api.get<TopRatedResponse>(
-      `${sourcesEnum.TOPRATED}?api_key=${AppConfig.token}&language=${language}`,
+      `${sourcesEnum.TOPRATED}?language=${language}`,
     );
 
     if (nowPlaying.status === 200) {
@@ -70,7 +69,7 @@ export const getUpcoming = async (language = 'en') => {
     const api = await API();
 
     const nowPlaying = await api.get<UpcomingMoviesResponse>(
-      `${sourcesEnum.TOPRATED}?api_key=${AppConfig.token}&language=${language}`,
+      `${sourcesEnum.UPCOMING}?language=${language}`,
     );
 
     if (nowPlaying.status === 200) {

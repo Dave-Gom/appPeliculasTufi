@@ -16,7 +16,7 @@ export interface Result {
   backdrop_path: string;
   genre_ids: number[];
   id: number;
-  original_language: OriginalLanguage;
+  original_language: string;
   original_title: string;
   overview: string;
   popularity: number;
@@ -26,11 +26,4 @@ export interface Result {
   video: boolean;
   vote_average: number;
   vote_count: number;
-}
-
-export enum OriginalLanguage {
-  En = 'en',
-  Es = 'es',
-  Ja = 'ja',
-  Ko = 'ko',
 }

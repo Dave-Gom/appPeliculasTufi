@@ -1,21 +1,25 @@
-import axios, {AxiosResponse} from 'axios';
+import axios, {AxiosRequestConfig, AxiosResponse} from 'axios';
 import {AppConfig} from '../config/appConfig';
 import {
   interceptorResponse,
   interceptorResponseF,
 } from './InterceptorFunctions';
 
-type PostType = <T = any, R = AxiosResponse<T>>(
+type PostType = <T = any, R = AxiosResponse<T>, D = any>(
   url: string,
-  body: any,
+  data?: D,
+  config?: AxiosRequestConfig<D>,
 ) => Promise<R>;
 
-type getType = <T = any, R = AxiosResponse<T>>(
+type getType = <T = any, R = AxiosResponse<T>, D = any>(
   url: string,
-  auth?: boolean,
+  config?: AxiosRequestConfig<D>,
 ) => Promise<R>;
 
-type delType = <T = any, R = AxiosResponse<T>>(url: string) => Promise<R>;
+type delType = <T = any, R = AxiosResponse<T>, D = any>(
+  url: string,
+  config?: AxiosRequestConfig<D>,
+) => Promise<R>;
 
 export const API = async (contentType?: string) => {
   const createAxiosObject = async () => {
@@ -36,44 +40,54 @@ export const API = async (contentType?: string) => {
 
   const AXIOS = await createAxiosObject();
 
-  const get: getType = (url: string, auth: boolean = false) => {
-    return AXIOS.get(
-      url,
-      auth
-        ? {
-            headers: {
-              Authorization: `Bearer + ${AppConfig.token}`,
-            },
-          }
-        : undefined,
-    );
+  const get: getType = (
+    url: string,
+    config = {
+      headers: {
+        Authorization: `Bearer + ${AppConfig.token}`,
+      },
+    },
+  ) => {
+    return AXIOS.get(url, config);
   };
 
-  const post: PostType = (url: string, body: any) => {
-    return AXIOS.post(url, body, {
+  const post: PostType = (
+    url: string,
+    body: any,
+    config = {
       headers: {
         Authorization: `Bearer + ${AppConfig.token}`,
       },
       withCredentials: true,
-    });
+    },
+  ) => {
+    return AXIOS.post(url, body, config);
   };
 
-  const put: PostType = (url: string, body: any) => {
-    return AXIOS.put(url, body, {
+  const put: PostType = (
+    url: string,
+    body: any,
+    config = {
       headers: {
         Authorization: `Bearer + ${AppConfig.token}`,
       },
       withCredentials: true,
-    });
+    },
+  ) => {
+    return AXIOS.put(url, body, config);
   };
 
-  const del: delType = (url: string) => {
-    return AXIOS.delete(url, {
+  const del: delType = (
+    url: string,
+    body: any,
+    config = {
       headers: {
         Authorization: `Bearer + ${AppConfig.token}`,
       },
       withCredentials: true,
-    });
+    },
+  ) => {
+    return AXIOS.delete(url, config);
   };
 
   return {

@@ -1,5 +1,3 @@
-import {OriginalLanguage} from './NowPlaying.response';
-
 export interface UpcomingMoviesResponse {
   dates: Dates;
   page: number;
@@ -18,7 +16,7 @@ export interface Result {
   backdrop_path: string;
   genre_ids: number[];
   id: number;
-  original_language: OriginalLanguage;
+  original_language: string;
   original_title: string;
   overview: string;
   popularity: number;

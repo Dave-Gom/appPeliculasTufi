@@ -1,14 +1,21 @@
 import React from 'react';
-import {ImageBackground, StyleSheet, View} from 'react-native';
+import {ImageBackground, StyleSheet, View, ViewStyle} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 export type BackgroundProps = {
+  containerStyle?: ViewStyle;
+
+  style?: ViewStyle;
   children?: JSX.Element | JSX.Element[];
 };
 
-const Background = ({children = <></>}: BackgroundProps) => {
+const Background = ({
+  children = <></>,
+  containerStyle,
+  style,
+}: BackgroundProps) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       <LinearGradient
         colors={['#2E1371', '#130B2B']}
         style={styles.gradient}
@@ -17,7 +24,7 @@ const Background = ({children = <></>}: BackgroundProps) => {
           source={require('../../../assets/img/Background.png')}
           style={styles.background}
         />
-        <View style={styles.container}>{children}</View>
+        <View style={[styles.container, style]}>{children}</View>
       </LinearGradient>
     </View>
   );

@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* appPeliculasTufiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* appPeliculasTufiTests.m */; };
+		04B3187AFEDD4A5D8316745B /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1D9C67A1A845E692BF5CA0 /* Background.png */; };
 		0C80B921A6F3F58F76C31292 /* libPods-appPeliculasTufi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-appPeliculasTufi.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		38ADF60810F842B6B9C9473F /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3A9FECAD494CC1872DB0EF /* PlusJakartaSans-SemiBold.ttf */; };
+		70009D3D21C64B3D87A0C877 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376551DFE7434A14A3BBE50F /* PlusJakartaSans-ExtraBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-appPeliculasTufi-appPeliculasTufiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-appPeliculasTufi-appPeliculasTufiTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		EDBA7F3CDC90429F918FB7D2 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C7A8CB1CC5E459F9FA22641 /* PlusJakartaSans-Bold.ttf */; };
-		70009D3D21C64B3D87A0C877 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376551DFE7434A14A3BBE50F /* PlusJakartaSans-ExtraBold.ttf */; };
-		FE8B45A5698B4A5D951E3C07 /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CC74F860AD14FE48C34C559 /* PlusJakartaSans-Light.ttf */; };
-		E0ED0EC4497849898FBDEE4A /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90864640526F414FBC71DD9C /* PlusJakartaSans-Medium.ttf */; };
 		E04A936B6FE245A1AC17D11D /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AC5E5EE96448A9A524986 /* PlusJakartaSans-Regular.ttf */; };
-		38ADF60810F842B6B9C9473F /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3A9FECAD494CC1872DB0EF /* PlusJakartaSans-SemiBold.ttf */; };
-		04B3187AFEDD4A5D8316745B /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1D9C67A1A845E692BF5CA0 /* Background.png */; };
+		E0ED0EC4497849898FBDEE4A /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90864640526F414FBC71DD9C /* PlusJakartaSans-Medium.ttf */; };
+		E875DC7E2B92B4C00064E2F2 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = E875DC7D2B92B4C00064E2F2 /* Fonts */; };
+		EDBA7F3CDC90429F918FB7D2 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C7A8CB1CC5E459F9FA22641 /* PlusJakartaSans-Bold.ttf */; };
+		FE8B45A5698B4A5D951E3C07 /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CC74F860AD14FE48C34C559 /* PlusJakartaSans-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,20 +45,21 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = appPeliculasTufi/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = appPeliculasTufi/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-appPeliculasTufi-appPeliculasTufiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-appPeliculasTufi-appPeliculasTufiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		376551DFE7434A14A3BBE50F /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-ExtraBold.ttf"; path = "../assets/fonts/PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-appPeliculasTufi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appPeliculasTufi.debug.xcconfig"; path = "Target Support Files/Pods-appPeliculasTufi/Pods-appPeliculasTufi.debug.xcconfig"; sourceTree = "<group>"; };
+		3C7A8CB1CC5E459F9FA22641 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Bold.ttf"; path = "../assets/fonts/PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
+		3D1D9C67A1A845E692BF5CA0 /* Background.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Background.png; path = ../assets/img/Background.png; sourceTree = "<group>"; };
+		4D9AC5E5EE96448A9A524986 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Regular.ttf"; path = "../assets/fonts/PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-appPeliculasTufi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appPeliculasTufi.release.xcconfig"; path = "Target Support Files/Pods-appPeliculasTufi/Pods-appPeliculasTufi.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-appPeliculasTufi-appPeliculasTufiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appPeliculasTufi-appPeliculasTufiTests.debug.xcconfig"; path = "Target Support Files/Pods-appPeliculasTufi-appPeliculasTufiTests/Pods-appPeliculasTufi-appPeliculasTufiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CC74F860AD14FE48C34C559 /* PlusJakartaSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Light.ttf"; path = "../assets/fonts/PlusJakartaSans-Light.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-appPeliculasTufi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-appPeliculasTufi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = appPeliculasTufi/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-appPeliculasTufi-appPeliculasTufiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appPeliculasTufi-appPeliculasTufiTests.release.xcconfig"; path = "Target Support Files/Pods-appPeliculasTufi-appPeliculasTufiTests/Pods-appPeliculasTufi-appPeliculasTufiTests.release.xcconfig"; sourceTree = "<group>"; };
+		90864640526F414FBC71DD9C /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Medium.ttf"; path = "../assets/fonts/PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
+		E875DC7D2B92B4C00064E2F2 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		3C7A8CB1CC5E459F9FA22641 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; name = "PlusJakartaSans-Bold.ttf"; path = "../assets/fonts/PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		376551DFE7434A14A3BBE50F /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; name = "PlusJakartaSans-ExtraBold.ttf"; path = "../assets/fonts/PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5CC74F860AD14FE48C34C559 /* PlusJakartaSans-Light.ttf */ = {isa = PBXFileReference; name = "PlusJakartaSans-Light.ttf"; path = "../assets/fonts/PlusJakartaSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		90864640526F414FBC71DD9C /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; name = "PlusJakartaSans-Medium.ttf"; path = "../assets/fonts/PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4D9AC5E5EE96448A9A524986 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; name = "PlusJakartaSans-Regular.ttf"; path = "../assets/fonts/PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FD3A9FECAD494CC1872DB0EF /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "PlusJakartaSans-SemiBold.ttf"; path = "../assets/fonts/PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3D1D9C67A1A845E692BF5CA0 /* Background.png */ = {isa = PBXFileReference; name = "Background.png"; path = "../assets/img/Background.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD3A9FECAD494CC1872DB0EF /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-SemiBold.ttf"; path = "../assets/fonts/PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		13B07FAE1A68108700A75B9A /* appPeliculasTufi */ = {
 			isa = PBXGroup;
 			children = (
+				E875DC7D2B92B4C00064E2F2 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -152,19 +155,8 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B4392A12AC88292D35C810B /* Pods-appPeliculasTufi.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-appPeliculasTufi.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-appPeliculasTufi-appPeliculasTufiTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-appPeliculasTufi-appPeliculasTufiTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		A2EAE9610E7B45299B7F4B0C /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				3C7A8CB1CC5E459F9FA22641 /* PlusJakartaSans-Bold.ttf */,
 				376551DFE7434A14A3BBE50F /* PlusJakartaSans-ExtraBold.ttf */,
@@ -176,7 +168,17 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-appPeliculasTufi.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-appPeliculasTufi.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-appPeliculasTufi-appPeliculasTufiTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-appPeliculasTufi-appPeliculasTufiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -276,6 +278,7 @@
 				EDBA7F3CDC90429F918FB7D2 /* PlusJakartaSans-Bold.ttf in Resources */,
 				70009D3D21C64B3D87A0C877 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				FE8B45A5698B4A5D951E3C07 /* PlusJakartaSans-Light.ttf in Resources */,
+				E875DC7E2B92B4C00064E2F2 /* Fonts in Resources */,
 				E0ED0EC4497849898FBDEE4A /* PlusJakartaSans-Medium.ttf in Resources */,
 				E04A936B6FE245A1AC17D11D /* PlusJakartaSans-Regular.ttf in Resources */,
 				38ADF60810F842B6B9C9473F /* PlusJakartaSans-SemiBold.ttf in Resources */,
@@ -617,10 +620,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -688,10 +688,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

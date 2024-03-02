@@ -37,8 +37,6 @@ const MovieWidget = ({
   const loadData = async () => {
     setLoading(true);
     let pelis = await loadFunction();
-    console.log(JSON.stringify(pelis, undefined, 2));
-
     setdata(pelis);
     setLoading(false);
     refreshControl(false);

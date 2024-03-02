@@ -1,25 +1,25 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import Home from '../pages/Home';
 import {CustomHeaderFuncion} from '../utils/CustomHeaderFuncion';
+import HomeRouter from './HomeRouter';
 
 export type AppParamList = {
-  home: undefined;
+  Home: undefined;
 };
 
 const Stack = createNativeStackNavigator<AppParamList>();
 
 const AppRoutes = () => {
   return (
-    <Stack.Navigator initialRouteName="home">
+    <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
         options={CustomHeaderFuncion({
           title: 'Choose Movie',
           headerColor: 'rgba(0, 0, 0, 0)',
           tintColor: 'rgba(255, 255, 255, .86)',
         })}
-        name="home"
-        component={Home}
+        name="Home"
+        component={HomeRouter}
       />
     </Stack.Navigator>
   );

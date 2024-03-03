@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   FlatList,
   Image,
@@ -37,10 +38,7 @@ const MoviesList = ({
                 source={{
                   uri: `${AppConfig.imgURLBase}${item.posterPath}`,
                 }}
-                style={[
-                  {width: 120, height: 180, borderRadius: 20},
-                  contentImageStyles,
-                ]}
+                style={[styles.defaultImageStyles, contentImageStyles]}
                 resizeMode="cover"
                 defaultSource={
                   item.posterPath
@@ -77,4 +75,5 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginLeft: 20,
   },
+  defaultImageStyles: {width: 120, height: 180, borderRadius: 20},
 });

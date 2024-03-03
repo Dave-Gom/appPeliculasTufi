@@ -4,20 +4,21 @@ import LinearGradient from 'react-native-linear-gradient';
 
 export type BackgroundProps = {
   containerStyle?: ViewStyle;
-
   style?: ViewStyle;
   children?: JSX.Element | JSX.Element[];
+  gradientColors?: string[];
 };
 
 const Background = ({
   children = <></>,
   containerStyle,
   style,
+  gradientColors,
 }: BackgroundProps) => {
   return (
     <View style={[styles.container, containerStyle]}>
       <LinearGradient
-        colors={['#2E1371', '#130B2B']}
+        colors={gradientColors ?? ['#2E1371', '#130B2B']}
         style={styles.gradient}
         angle={45}>
         <ImageBackground

@@ -1,3 +1,5 @@
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 import React from 'react';
 import {
   FlatList,
@@ -5,11 +7,13 @@ import {
   ImageStyle,
   StyleProp,
   StyleSheet,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import {Text} from 'react-native-paper';
 import {AppConfig} from '../../config/appConfig';
 import {Movie} from '../../models/interfaces/movie';
+import {AppParamList} from '../../routes/AppRouter';
 
 type TitlesWidgetProps = {
   title: string;
@@ -26,6 +30,7 @@ const MoviesList = ({
   numColumns,
   contentImageStyles,
 }: TitlesWidgetProps) => {
+  const nav = useNavigation<StackNavigationProp<AppParamList, 'Home'>>();
   return (
     <View style={styles.container}>
       <Text style={styles.titleStyles}>{title}</Text>
@@ -33,20 +38,22 @@ const MoviesList = ({
         data={data}
         renderItem={({item}) => {
           return (
-            <View style={{marginLeft: 20}}>
-              <Image
-                source={{
-                  uri: `${AppConfig.imgURLBase}${item.posterPath}`,
-                }}
-                style={[styles.defaultImageStyles, contentImageStyles]}
-                resizeMode="cover"
-                defaultSource={
-                  item.posterPath
-                    ? undefined
-                    : require('../../../assets/img/imdbnoimage.jpg')
-                }
-              />
-            </View>
+            <TouchableOpacity onPress={() => nav.navigate('Movie', item)}>
+              <View style={{marginLeft: 20}}>
+                <Image
+                  source={{
+                    uri: `${AppConfig.imgURLBase}${item.posterPath}`,
+                  }}
+                  style={[styles.defaultImageStyles, contentImageStyles]}
+                  resizeMode="cover"
+                  defaultSource={
+                    item.posterPath
+                      ? undefined
+                      : require('../../../assets/img/imdbnoimage.jpg')
+                  }
+                />
+              </View>
+            </TouchableOpacity>
           );
         }}
         horizontal={!vertical}

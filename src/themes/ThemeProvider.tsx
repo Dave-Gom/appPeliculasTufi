@@ -17,6 +17,7 @@ const ThemeProvider = ({children}: ThemeProviderProps) => {
         colors: {
           ...DefaultTheme.colors,
           onSurfaceVariant: 'white',
+          primary: 'white',
         },
       } as MD3Theme),
     [],

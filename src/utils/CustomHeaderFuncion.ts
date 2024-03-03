@@ -3,7 +3,7 @@ import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
 import {StyleProp, TextStyle} from 'react-native';
 
 interface headerProps {
-  title: string;
+  title?: string;
   //   titleColor?: string;
   headerColor?: string;
   tintColor?: string;

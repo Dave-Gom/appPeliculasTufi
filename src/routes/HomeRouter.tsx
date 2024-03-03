@@ -8,12 +8,12 @@ import Icon from 'react-native-vector-icons/FontAwesome6';
 
 import Background from '../components/background/Background';
 import Home from '../pages/Home';
-import SeachPage from '../pages/SeachPage';
+import SearchPage from '../pages/SearchPage';
 import {CustomTabNavigationHeaderFuncion} from '../utils/CustomHeaderFuncion';
 
 export type HomeParamList = {
   HomePage: undefined;
-  SeachPage: undefined;
+  SearchPage: undefined;
 };
 
 const HomeRouter = () => {
@@ -71,8 +71,8 @@ const HomeRouter = () => {
         }}
       />
       <Tab.Screen
-        name="SeachPage"
-        component={SeachPage}
+        name="SearchPage"
+        component={SearchPage}
         options={{
           ...CustomTabNavigationHeaderFuncion({
             headerTitle: 'Search Movie',

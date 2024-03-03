@@ -10,7 +10,7 @@ import {Movie} from '../models/interfaces/movie';
 import {HomeParamList} from '../routes/HomeRouter';
 import {styles} from '../themes/styles';
 
-const SeachPage = ({}: StackScreenProps<HomeParamList, 'SeachPage'>) => {
+const SearchPage = ({}: StackScreenProps<HomeParamList, 'SearchPage'>) => {
   const [title, setTitle] = useState('');
   const [loading, setLoading] = useState(false);
   const [pelis, setPelis] = useState<Movie[]>([]);
@@ -87,4 +87,4 @@ const SeachPage = ({}: StackScreenProps<HomeParamList, 'SeachPage'>) => {
   );
 };
 
-export default SeachPage;
+export default SearchPage;

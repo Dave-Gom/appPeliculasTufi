@@ -104,24 +104,57 @@ const MoviePage = ({
                 </View>
                 <Text style={styleSheetStyles.overviewStyles}>{overview}</Text>
                 {movieDetails !== null && (
-                  <View style={{width: '100%'}}>
+                  <View style={{width: '100%', marginVertical: 10}}>
                     <Text style={styleSheetStyles.overviewStyles}>
-                      Languages:{'  '}
+                      <Text
+                        style={[
+                          styleSheetStyles.overviewStyles,
+                          {
+                            fontFamily: 'PlusJakartaSans-ExtraBold',
+                            fontWeight: '800',
+                          },
+                        ]}>
+                        Languages:
+                      </Text>
+                      {'  '}
                       {movieDetails.genres.map(item => item.name).join(' · ')}
                     </Text>
                     <Text style={styleSheetStyles.overviewStyles}>
-                      IMDb {movieDetails.vote_average}{' '}
-                    </Text>
-                    <Text style={styleSheetStyles.overviewStyles}>
-                      {new Date(movieDetails.release_date).getFullYear()}
-                      {'  '}
-                      {movieDetails.runtime} min
-                    </Text>
-                    <Text style={styleSheetStyles.overviewStyles}>
-                      Languages:{' '}
+                      <Text
+                        style={[
+                          styleSheetStyles.overviewStyles,
+                          {
+                            fontFamily: 'PlusJakartaSans-ExtraBold',
+                            fontWeight: '800',
+                          },
+                        ]}>
+                        Languages:
+                      </Text>{' '}
                       {movieDetails.spoken_languages
                         .map(item => item.name)
                         .join(' · ')}
+                    </Text>
+                    <Text
+                      style={[
+                        styleSheetStyles.overviewStyles,
+                        {
+                          fontFamily: 'PlusJakartaSans-ExtraBold',
+                          fontWeight: '800',
+                        },
+                      ]}>
+                      IMDb {movieDetails.vote_average}{' '}
+                    </Text>
+                    <Text
+                      style={[
+                        styleSheetStyles.overviewStyles,
+                        {
+                          fontFamily: 'PlusJakartaSans-ExtraBold',
+                          fontWeight: '800',
+                        },
+                      ]}>
+                      {new Date(movieDetails.release_date).getFullYear()}
+                      {'  '}
+                      {movieDetails.runtime} min
                     </Text>
                   </View>
                 )}

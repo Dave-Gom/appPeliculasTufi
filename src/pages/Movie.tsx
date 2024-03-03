@@ -52,9 +52,13 @@ const MoviePage = ({
   return (
     <View style={styles.wrapper}>
       <ImageBackground
-        source={{
-          uri: `${AppConfig.imgURLBase}${posterPath}`,
-        }}
+        source={
+          posterPath
+            ? {
+                uri: `${AppConfig.imgURLBase}${posterPath}`,
+              }
+            : require('../../assets/img/cinemaImg.jpeg')
+        }
         style={styleSheetStyles.background}
       />
       <LinearGradient
@@ -76,7 +80,7 @@ const MoviePage = ({
           style={styles.wrapper}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}>
-          <View style={styleSheetStyles.container}>
+          <View style={[styleSheetStyles.container, {marginBottom: 20}]}>
             {loading ? (
               <LottieViewer
                 imagen={require('../../assets/lotties/Loader.json')}
@@ -99,6 +103,28 @@ const MoviePage = ({
                   )}
                 </View>
                 <Text style={styleSheetStyles.overviewStyles}>{overview}</Text>
+                {movieDetails !== null && (
+                  <View style={{width: '100%'}}>
+                    <Text style={styleSheetStyles.overviewStyles}>
+                      Languages:{'  '}
+                      {movieDetails.genres.map(item => item.name).join(' · ')}
+                    </Text>
+                    <Text style={styleSheetStyles.overviewStyles}>
+                      IMDb {movieDetails.vote_average}{' '}
+                    </Text>
+                    <Text style={styleSheetStyles.overviewStyles}>
+                      {new Date(movieDetails.release_date).getFullYear()}
+                      {'  '}
+                      {movieDetails.runtime} min
+                    </Text>
+                    <Text style={styleSheetStyles.overviewStyles}>
+                      Languages:{' '}
+                      {movieDetails.spoken_languages
+                        .map(item => item.name)
+                        .join(' · ')}
+                    </Text>
+                  </View>
+                )}
               </>
             )}
           </View>

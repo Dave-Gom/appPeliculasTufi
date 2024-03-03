@@ -1,6 +1,8 @@
+import {StackScreenProps} from '@react-navigation/stack';
 import React, {useState} from 'react';
 import {FlatList, RefreshControl, View} from 'react-native';
 import {CategoriesEnum} from '../models/enums/categoriesEnum';
+import {HomeParamList} from '../routes/HomeRouter';
 import {WidgetComponent} from '../widgets/WidgetComponent';
 
 const customHome = [
@@ -10,7 +12,7 @@ const customHome = [
   CategoriesEnum.UPCOMING,
 ];
 
-const Home = () => {
+const Home = ({}: StackScreenProps<HomeParamList, 'HomePage'>) => {
   const [refreshing, setRefreshing] = useState(false);
 
   return (

@@ -9,9 +9,15 @@ import Icon from 'react-native-vector-icons/FontAwesome6';
 import Background from '../components/background/Background';
 import Home from '../pages/Home';
 import SeachPage from '../pages/SeachPage';
+import {CustomTabNavigationHeaderFuncion} from '../utils/CustomHeaderFuncion';
+
+export type HomeParamList = {
+  HomePage: undefined;
+  SeachPage: undefined;
+};
 
 const HomeRouter = () => {
-  const Tab = createBottomTabNavigator();
+  const Tab = createBottomTabNavigator<HomeParamList>();
 
   return (
     <Tab.Navigator
@@ -33,7 +39,11 @@ const HomeRouter = () => {
         name="HomePage"
         component={Home}
         options={{
-          title: '',
+          ...CustomTabNavigationHeaderFuncion({
+            headerTitle: 'Choose Movie',
+            headerColor: 'rgba(0, 0, 0, 0)',
+            tintColor: 'rgba(255, 255, 255, .86)',
+          }),
           tabBarIcon: ({color, focused}) => (
             <LinearGradient
               colors={focused ? ['#60FFCA', '#19423400'] : ['transparent']}
@@ -64,7 +74,11 @@ const HomeRouter = () => {
         name="SeachPage"
         component={SeachPage}
         options={{
-          title: '',
+          ...CustomTabNavigationHeaderFuncion({
+            headerTitle: 'Search Movie',
+            headerColor: 'rgba(0, 0, 0, 0)',
+            tintColor: 'rgba(255, 255, 255, .86)',
+          }),
           tabBarIcon: ({color, focused}) => (
             <LinearGradient
               colors={focused ? ['#60FFCA', '#19423400'] : ['transparent']}

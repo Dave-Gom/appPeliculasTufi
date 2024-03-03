@@ -3,10 +3,12 @@ import {
   getPopular,
   getTopRated,
   getUpcoming,
+  searchByTitle,
 } from '../datasources/TheMovieDB.api';
 import {
   mapNowPlayingResponseToMovie,
   mapPopularMoviesResponseToMovies,
+  mapSearchResponseToMovies,
   mapTopRatedResponseToMovies,
   mapUpcomingMoviesResponseToMovies,
 } from '../mappers/MoviesMapper';
@@ -58,6 +60,20 @@ export const loadUpcoming = async () => {
     const response = await getUpcoming();
     if (response) {
       const movies = mapUpcomingMoviesResponseToMovies(response);
+      return movies;
+    }
+
+    return [];
+  } catch (error) {
+    return [];
+  }
+};
+
+export const searchMovie = async (title: string) => {
+  try {
+    const response = await searchByTitle(title);
+    if (response) {
+      const movies = mapSearchResponseToMovies(response);
       return movies;
     }
 

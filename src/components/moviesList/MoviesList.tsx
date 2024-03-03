@@ -1,4 +1,11 @@
-import {FlatList, Image, StyleSheet, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  ImageStyle,
+  StyleProp,
+  StyleSheet,
+  View,
+} from 'react-native';
 import {Text} from 'react-native-paper';
 import {AppConfig} from '../../config/appConfig';
 import {Movie} from '../../models/interfaces/movie';
@@ -6,9 +13,18 @@ import {Movie} from '../../models/interfaces/movie';
 type TitlesWidgetProps = {
   title: string;
   data: Movie[];
+  vertical?: boolean;
+  numColumns?: number;
+  contentImageStyles?: StyleProp<ImageStyle>;
 };
 
-const MoviesList = ({title, data}: TitlesWidgetProps) => {
+const MoviesList = ({
+  title,
+  data,
+  vertical = false,
+  numColumns,
+  contentImageStyles,
+}: TitlesWidgetProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.titleStyles}>{title}</Text>
@@ -21,16 +37,28 @@ const MoviesList = ({title, data}: TitlesWidgetProps) => {
                 source={{
                   uri: `${AppConfig.imgURLBase}${item.posterPath}`,
                 }}
-                style={{width: 120, height: 180, borderRadius: 20}}
+                style={[
+                  {width: 120, height: 180, borderRadius: 20},
+                  contentImageStyles,
+                ]}
                 resizeMode="cover"
+                defaultSource={
+                  item.posterPath
+                    ? undefined
+                    : require('../../../assets/img/imdbnoimage.jpg')
+                }
               />
             </View>
           );
         }}
-        horizontal
+        horizontal={!vertical}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{marginTop: 20, marginBottom: 20}}
+        numColumns={numColumns}
+        columnWrapperStyle={
+          numColumns && numColumns > 1 ? {margin: 10} : undefined
+        }
       />
     </View>
   );

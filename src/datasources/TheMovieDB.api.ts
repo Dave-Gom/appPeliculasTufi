@@ -9,6 +9,7 @@ export enum sourcesEnum {
   POPULAR = '/movie/popular',
   TOPRATED = '/movie/top_rated',
   UPCOMING = '/movie/upcoming',
+  SEARCHBYTITLE = '/search/movie',
 }
 
 export const getNowPlaying = async (language = 'en') => {
@@ -70,6 +71,23 @@ export const getUpcoming = async (language = 'en') => {
 
     const nowPlaying = await api.get<UpcomingMoviesResponse>(
       `${sourcesEnum.UPCOMING}?language=${language}`,
+    );
+
+    if (nowPlaying.status === 200) {
+      return nowPlaying.data;
+    }
+    return null;
+  } catch (error) {
+    return null;
+  }
+};
+
+export const searchByTitle = async (title: string, language = 'en') => {
+  try {
+    const api = await API();
+
+    const nowPlaying = await api.get<UpcomingMoviesResponse>(
+      `${sourcesEnum.SEARCHBYTITLE}?query=${title}&include_adult=false&language=${language}`,
     );
 
     if (nowPlaying.status === 200) {

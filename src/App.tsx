@@ -7,20 +7,20 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {DefaultTheme, PaperProvider} from 'react-native-paper';
 import Background from './components/background/Background';
 import AppRoutes from './routes/AppRouter';
 import {NavTheme} from './themes/NavigationTheme';
+import ThemeProvider from './themes/ThemeProvider';
 
 function App(): React.JSX.Element {
   return (
-    <PaperProvider theme={DefaultTheme}>
+    <ThemeProvider>
       <Background>
         <NavigationContainer theme={NavTheme}>
           <AppRoutes />
         </NavigationContainer>
       </Background>
-    </PaperProvider>
+    </ThemeProvider>
   );
 }
 

@@ -22,7 +22,7 @@ const Background = ({
         style={styles.gradient}
         angle={45}>
         <ImageBackground
-          source={require('../../../assets/img/Background.png')}
+          source={require('../../../assets/img/background.png')}
           style={styles.background}
         />
         <View style={[styles.container, style]}>{children}</View>
